@@ -1,0 +1,9 @@
+.basesearch-container{
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(224, 230, 239);
+    border-radius: 8px;
+    padding:1rem ;
+}

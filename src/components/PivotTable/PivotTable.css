@@ -1,0 +1,134 @@
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px; /* Adjust the max-height value to fit your content */
+    opacity: 1;
+  }
+}
+
+table.nested-table {
+  width: 90%;
+  margin-left: 5%;
+  border-collapse: collapse;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: slideDown 1s forwards; /* Apply the animation on opening */
+}
+
+.nested-table-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.base-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.base-table th,
+.base-table td,
+.nested-table th,
+.nested-table td {
+  padding: 8px;
+  text-align: left;
+}
+tr {
+  border: 1px solid #ccc;
+}
+
+.base-table th {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.base-table tr:hover {
+  background-color: #f2f2f2;
+}
+.nested-table tr:hover {
+  background-color: var(--medium-color);
+}
+
+.base-table th:nth-child(1) {
+  width: 40px;
+}
+
+.base-table td:nth-child(1) {
+  text-align: center;
+  cursor: pointer;
+}
+
+.nested-table td:nth-child(1) {
+  text-align: left;
+  width: 25%;
+}
+
+.nested-table tr:nth-child(even) {
+  background-color: #ebe6ff;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  tbody tr {
+    border-bottom: none;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f8f8;
+    z-index: 2;
+  }
+
+  /* Adjust font-size and padding for better mobile display */
+  table.base-table th,
+  table.base-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table.nested-table th,
+  table.nested-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .search-item {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px dotted var(--medium-color);
+}
+.search-item {
+  align-items: left;
+  justify-content: space-between;
+  border: 1px dotted var(--medium-color);
+}
+
+/* Add more custom CSS styles as needed */
